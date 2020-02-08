@@ -2,9 +2,9 @@ use Mix.Config
 
 # Configure your database
 config :fullstack_challenge, FullstackChallenge.Repo,
-  username: "postgres",
-  password: "postgres",
-  database: "fullstack_challenge_dev",
+  username: "gustavo",
+  password: "1234",
+  database: "astro_dev",
   hostname: "localhost",
   show_sensitive_data_on_connection_error: true,
   pool_size: 10
