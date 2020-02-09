@@ -50,6 +50,7 @@ defmodule FullstackChallenge.Users do
 
   """
   def create_user(attrs \\ %{}) do
+    #new_attrs = Map.get_and_update(attrs, :credits, 1000.00)
     %User{}
     |> User.changeset(attrs)
     |> Repo.insert()

@@ -12,7 +12,8 @@ defmodule FullstackChallengeWeb.UserController do
   end
 
   def create(conn, %{"user" => user_params}) do
-    with {:ok, %User{} = user} <- Users.create_user(user_params) do
+    params = Map.put(user_params, "credits", 1000.00)
+    with {:ok, %User{} = user} <- Users.create_user(params) do
       conn
       |> put_status(:created)
       |> put_resp_header("location", Routes.user_path(conn, :show, user))
